@@ -1,0 +1,32 @@
+:root {
+    --slotSize: 3rem;
+}
+
+.slot {
+    width: var(--slotSize);
+    height: var(--slotSize);
+    border-radius: 0.8rem;
+    display: inline-block;
+    margin: 0.2rem 0.3rem;
+}
+
+
+@media only screen and (max-width: 500px) {
+    :root {
+        --slotSize: 2.5rem
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    :root {
+        --slotSize: 2rem
+    }
+}
+
+
+@media only screen and (max-width: 300px) {
+    :root {
+        --slotSize: 1.5rem
+    }
+}
