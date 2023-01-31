@@ -20,13 +20,16 @@ import Menu from './components/navbar/Navbar';
 import UpdateProduct from './components/navbar/updateProduct';
 // import TableRow from './components/TableRow'
 // import GetData from './components/displayTable/DisplayTableUi';
+// import dotenv from "dotenv"
+// dotenv.config()
+const api = process.env.REACT_APP_API_URI
 
 function App() {
   const [tableInstance, setTableInstance] = useState([]);
 
   const fetchRowForTable = async () => {
     try {
-      const response = await axios.get(`https://ware-io-backend.onrender.com/products`)
+      const response = await axios.get(`${api}`)
       setTableInstance(response.data)
       console.log(tableInstance)
     } catch (e) {
