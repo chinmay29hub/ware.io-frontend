@@ -1,6 +1,7 @@
 // ** create-user.component.js ** //
 import React, { Component } from 'react';
 import axios from 'axios';
+const api = process.env.REACT_APP_API_URI
 export default class UpdateProduct extends Component {
     constructor(props) {
         super(props)
@@ -61,7 +62,7 @@ export default class UpdateProduct extends Component {
             cost_price : this.state.cost_price
 
         };
-        axios.post(`https://ware-io-backend.onrender.com/products/update/${this.state.id}`, productObject)
+        axios.post(`${api}update/${this.state.id}`, productObject)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {

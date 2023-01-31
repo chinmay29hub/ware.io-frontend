@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+const api = process.env.REACT_APP_API_URI
 export default class DeleteProduct extends Component {
     state = {
         id: ''
@@ -12,7 +13,7 @@ export default class DeleteProduct extends Component {
       handleSubmit = event => {
         event.preventDefault();
     
-        axios.delete(`https://ware-io-backend.onrender.com/products/${this.state.id}`)
+        axios.delete(`${api}${this.state.id}`)
           .then(res => {
             console.log(res);
             console.log(res.data);
