@@ -62,7 +62,7 @@ export default class UpdateProduct extends Component {
             cost_price : this.state.cost_price
 
         };
-        axios.post(`${api}update/${this.state.id}`, productObject)
+        axios.post(`${api}/update/${this.state.id}`, productObject)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {

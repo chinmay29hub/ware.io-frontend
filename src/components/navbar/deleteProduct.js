@@ -13,7 +13,7 @@ export default class DeleteProduct extends Component {
       handleSubmit = event => {
         event.preventDefault();
     
-        axios.delete(`${api}${this.state.id}`)
+        axios.delete(`${api}/${this.state.id}`)
           .then(res => {
             console.log(res);
             console.log(res.data);
